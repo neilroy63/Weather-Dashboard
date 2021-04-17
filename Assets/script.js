@@ -76,26 +76,27 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${txtCity},${"VIC"},${
 // ----  Function feeding the HTML the forecast data procured via forecast API 
 function renderForecastWeatherData(data) {
   // var tagetting the HTML div elements 
-  var day1 = $("#day-1");
+  var day1Temp = $("#day-1-temp");
+  // var day1Humidity = $("#day-1-humidity");
   var day2 = $("#day-2");
   var day3 = $("#day-3");
   var day4 = $("#day-4");
   var day5 = $("#day-5");
 //Vars above updated based on the data returned by the forecast API object 
-  day1.text ("Temp: " + data.list[1].main.temp + " Celcius")
-  day1.text ("Humidity: " + data.list[1].main.humidity + "%")
+  day1Temp.text ("Temp: " + data.list[6].main.temp + " Celcius")
+  // day1Humidity.text ("Humidity: " + data.list[6].main.humidity + "%")
 
-  day2.text ("Temp: " + data.list[13].main.temp + " Celcius")
-  day2.text ("Humidity: " + data.list[13].main.humidity + "%")
+  day2.text ("Temp: " + data.list[14].main.temp + " Celcius")
+  day2.text ("Humidity: " + data.list[14].main.humidity + "%")
 
-  day3.text ("Temp: " + data.list[21].main.temp + " Celcius")
-  day3.text ("Humidity: " + data.list[21].main.humidity + "%")
+  day3.text ("Temp: " + data.list[22].main.temp + " Celcius")
+  day3.text ("Humidity: " + data.list[22].main.humidity + "%")
 
-  day4.text ("Temp: " + data.list[29].main.temp + " Celcius")
-  day4.text ("Humidity: " + data.list[29].main.humidity + "%")
+  day4.text ("Temp: " + data.list[30].main.temp + " Celcius")
+  day4.text ("Humidity: " + data.list[30].main.humidity + "%")
 
-  day5.text ("Temp: " + data.list[37].main.temp + " Celcius")
-  day5.text ("Humidity: " + data.list[37].main.humidity + "%")
+  day5.text ("Temp: " + data.list[38].main.temp + " Celcius")
+  day5.text ("Humidity: " + data.list[38].main.humidity + "%")
 
 }
 
@@ -106,14 +107,11 @@ function PopulateWeatherData (event) {
    event.preventDefault();
     fetchWeatherData();
     fetchForecastWeatherData();
-  // fetchForecastWeatherData();
 }
 
 
 /*
 - Need to figure out how to get UVI and forecast data 
-- might need to call another API 
-- Need to then  feed data to divs on HTML 
 - Also need to update HTML with images representing the forecast / weather outlook (see project gif)
 - also need to use local storage   to store user input 
 - when searchbox is clicked, it will save the entered text/city to local storage (so that it  persists)
@@ -122,7 +120,9 @@ need 5 day forecast
 and 3 pieces of data for each day i.e. date, temp, humidity 
 + images to represent weather conditions 
 
-local storage
+local storage?
+how do I update the html for 3 values i.e. date, temp, humidity for the forecast 
+how do i input images to represent the weather???
 
 
 
