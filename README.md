@@ -27,3 +27,9 @@ THEN I am again presented with current and future conditions for that city
 ## Issue
 
 The application is a work in progress and currently does not display weather icons to correspond with the text (such as a sun icon depicting sunny weather forecast, cloud / rain icons depiciting wet weather forecast etc.)
+
+# Images
+
+![image](https://user-images.githubusercontent.com/61643257/121016999-21e21b00-c7e0-11eb-8e74-db4bca05bcff.png)
+
+![image](https://user-images.githubusercontent.com/61643257/121017050-2e667380-c7e0-11eb-8716-acbd5b75de10.png)
